@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/whitesmoke"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/city_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:text="A"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded,RtlSymmetry"/>
+</RelativeLayout>

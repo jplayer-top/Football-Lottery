@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="白色保活"/>
+
+    <Button
+        android:id="@+id/btn_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="灰色保活"/>
+
+    <Button
+        android:id="@+id/btn_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="黑色保活（发广播）"/>
+
+    <Button
+        android:id="@+id/btn_background_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通后台 Service 进程"/>
+
+</LinearLayout>

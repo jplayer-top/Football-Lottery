@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MultipleStatusView">
+        <attr name="loadingView" format="reference"/>
+        <attr name="errorView" format="reference"/>
+        <attr name="emptyView" format="reference"/>
+        <attr name="noNetworkView" format="reference"/>
+        <attr name="contentView" format="reference"/>
+    </declare-styleable>
+    <attr name="SpinKitViewStyle" format="reference"/>
+
+    <declare-styleable name="SpinKitView">
+        <attr name="SpinKit_Style">
+            <enum name="RotatingPlane" value="0"/>
+            <enum name="DoubleBounce" value="1"/>
+            <enum name="Wave" value="2"/>
+            <enum name="WanderingCubes" value="3"/>
+            <enum name="Pulse" value="4"/>
+            <enum name="ChasingDots" value="5"/>
+            <enum name="ThreeBounce" value="6"/>
+            <enum name="Circle" value="7"/>
+            <enum name="CubeGrid" value="8"/>
+            <enum name="FadingCircle" value="9"/>
+            <enum name="FoldingCube" value="10"/>
+            <enum name="RotatingCircle" value="11"/>
+            <enum name="MultiplePulse" value="12"/>
+            <enum name="PulseRing" value="13"/>
+            <enum name="MultiplePulseRing" value="14"/>
+        </attr>
+        <attr name="SpinKit_Color" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="ShSwitchView">
+        <attr name="tintColor" format="reference|color"/>
+        <attr name="outerStrokeWidth" format="reference|dimension"/>
+        <attr name="shadowSpace" format="reference|dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ShoppingView">
+        <attr name="sv_bg_color" format="color"/>
+        <attr name="sv_text" format="string"/>
+        <attr name="sv_text_size" format="dimension"/>
+        <attr name="sv_duration" format="integer"/>
+    </declare-styleable>
+    <!--SmartIndicator-->
+    <declare-styleable name="SmartIndicator">
+        <attr name="text_color_normal" format="color"/>
+        <attr name="text_color_selected" format="color"/>
+        <attr name="text_size" format="dimension"/>
+        <!--指示器可见数量-->
+        <attr name="indicator_visible_count" format="integer"/>
+        <attr name="indicator_color" format="color"/>
+        <attr name="indicator_style">
+            <enum name="bitmap" value="0"/>
+            <enum name="line" value="1"/>
+            <enum name="triangle" value="2"/>
+        </attr>
+        <!--指示器bitmap资源,style=bitmap有效-->
+        <attr name="style_bitmap_src" format="reference"/>
+        <!--线性指示器左右padding，默认根据数量均分屏幕-->
+        <attr name="style_line_padding" format="dimension"/>
+        <!--指示器高度-->
+        <attr name="indicator_height" format="dimension"/>
+        <!--指示器宽度-->
+        <attr name="indicator_width" format="dimension"/>
+    </declare-styleable>
+</resources>

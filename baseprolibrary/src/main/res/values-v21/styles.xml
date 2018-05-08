@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="OblAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!-- 允许使用transitions -->
+        <!--是否覆盖执行，其实可以理解成是否同步执行还是顺序执行-->
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorBlackGold</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:windowAnimationStyle">@style/Animation.Activity.Translucent.Style</item>
+        <!--Button 去阴影-->
+        <item name="android:textViewStyle">@style/OblAppTheme.TextView</item>
+        <item name="android:button">@style/OblAppTheme.Button</item>
+        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="toolbarStyle">@style/Obl.AppBarOverlay</item>
+    </style>
+
+
+</resources>

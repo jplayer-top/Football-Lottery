@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/ivFree"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/coin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/dialog_del"
+        android:tint="@color/chocolate"
+        app:layout_constraintEnd_toEndOf="@id/ivFree"
+        app:layout_constraintTop_toTopOf="@id/ivFree"/>
+</android.support.constraint.ConstraintLayout>

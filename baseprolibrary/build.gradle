@@ -1,0 +1,98 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        ndk {
+            //APP的build.gradle设置支持的SO库架构
+            abiFilters 'armeabi-v7a', 'x86'
+        }
+    }
+
+    signingConfigs {
+        config {
+            keyAlias "obl"
+            keyPassword "lj011200"
+            storeFile file("../obl.jks")
+            storePassword "lj011200"
+        }
+
+        debug {
+            keyAlias "obl"
+            keyPassword "lj011200"
+            storeFile file("../obl.jks")
+            storePassword "lj011200"
+
+        }
+        release {
+            keyAlias "obl"
+            keyPassword "lj011200"
+            storeFile file("../obl.jks")
+            storePassword "lj011200"
+        }
+    }
+    buildTypes {
+        def filed = rootProject.ext.filed
+        release {
+            buildConfigField "String", "HOST", filed["release"]
+            minifyEnabled false // 开启混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            buildConfigField "String", "HOST", filed["debug"]
+            buildConfigField "String", "HEADER_HOST", filed["header"]
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation rootProject.ext.supportLibs
+    //网络请求
+    api rootProject.ext.networkLibs
+    //RX
+    api rootProject.ext.rxJavaLibs
+
+    //RecyclerView Help
+    api rootProject.ext.baserecyclerviewadapterhelper
+    //辅助库(包含：刷新，glide,沉浸式bar,动画库,Toast,PickerView,权限2.00,加载器,二维码,polygon,侧滑)
+    api rootProject.ext.otherLibs
+    //support 冲突解决
+    api(rootProject.ext.navigationbar) {
+        exclude group: 'com.android.support'
+    }
+    api(rootProject.ext.bga_banner) {
+        exclude group: 'com.android.support'
+    }
+    api(rootProject.ext.v_layout) {
+        transitive = true
+    }
+    //GlideOkHttp
+    api(rootProject.ext.glideOkhttp) {
+        exclude group: 'glide-parent'
+    }
+    annotationProcessor rootProject.ext.annotationProcessorLibs
+
+}

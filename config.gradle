@@ -1,0 +1,92 @@
+ext {
+
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.0",
+            minSdkVersion    : 19,
+            targetSdkVersion : 26,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    dependVersion = [
+            androidSupportSdkVersion: "27.0.0",
+            retrofitSdkVersion      : "2.3.0",
+            glideSdkVersion         : "4.0.0",
+            rxJava                  : "2.1.5",
+            rxAndroid               : "2.0.1"
+    ]
+    filed = [
+            "debug"  : "\"https://dev.jplayer.top/\"",
+            "release": "\"https://app.jplayer.top/\"",
+            "channel": "dev",
+            "header" : "\"HEADER_HOST\""
+    ]
+    supportDeps = [
+            //--------  support  -------
+            supportv4  : "com.android.support:support-v4:$dependVersion.androidSupportSdkVersion",
+            appcompatv7: "com.android.support:appcompat-v7:$dependVersion.androidSupportSdkVersion",
+            cardview   : "com.android.support:cardview-v7:$dependVersion.androidSupportSdkVersion",
+            design     : "com.android.support:design:$dependVersion.androidSupportSdkVersion",
+            annotations: "com.android.support:support-annotations:$dependVersion.androidSupportSdkVersion",
+            constraint : "com.android.support.constraint:constraint-layout:1.0.2"
+    ]
+
+
+    retrofit = [
+            //------ retrofit和RxJava ---------
+            retrofit                : "com.squareup.retrofit2:retrofit:$dependVersion.retrofitSdkVersion",
+            retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:$dependVersion.retrofitSdkVersion",
+            retrofitAdapterRxjava2  : "com.squareup.retrofit2:adapter-rxjava2:$dependVersion.retrofitSdkVersion",
+            okhttp3LoggerInterceptor: 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    ]
+
+    rxJava = [
+            rxJava   : "io.reactivex.rxjava2:rxjava:$dependVersion.rxJava",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$dependVersion.rxAndroid"
+    ]
+    //RecyclerView 适配器
+    baserecyclerviewadapterhelper = 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.3'
+    //V-layout
+    v_layout = 'com.alibaba.android:vlayout:1.2.9@aar'
+    //ViewPager
+    bga_banner = 'cn.bingoogolapple:bga-banner:2.2.3@aar'
+    //底部栏
+    navigationbar = "devlight.io:navigationtabbar:1.2.5"
+    //沉浸式
+    barlibrary = 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //动画封装库
+    viewanimator = 'com.github.florent37:viewanimator:1.0.5'
+    // 下拉刷新
+    smartrefresh = 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    //特殊头部，看情况添加
+    smartrefresh_heard = 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+    greendao = 'org.greenrobot:greendao:3.2.2'
+    //自定义Toast
+    toasty = 'com.github.GrenderG:Toasty:1.1.4'
+    //流布局
+    flowlayout = 'com.zhy:flowlayout-lib:1.0.3'
+    // 加载
+    spinkit = 'com.github.ybq:Android-SpinKit:1.1.0'
+    //PickerView
+    pickerview = 'com.contrarywind:Android-PickerView:3.2.7'
+    //权限申请
+    permission = 'com.yanzhenjie:permission:2.0.0-rc4'
+    //二维码
+    qcode = 'cn.yipianfengye.android:zxing-library:2.1'
+    //多边形图+图片滤镜
+    polygon = 'com.kingja.magicmirror:magicmirror:1.2.0'
+    swipebacklayout = 'cn.bingoogolapple:bga-swipebacklayout:1.1.8@aar'
+    glide = "com.github.bumptech.glide:glide:$dependVersion.glideSdkVersion"
+    glideCompiler = "com.github.bumptech.glide:compiler:$dependVersion.glideSdkVersion"
+    glideOkhttp = "com.github.bumptech.glide:okhttp3-integration:$dependVersion.glideSdkVersion"
+
+
+    supportLibs = supportDeps.values()
+    networkLibs = retrofit.values()
+    rxJavaLibs = rxJava.values()
+    otherLibs = [barlibrary, glide, smartrefresh, smartrefresh_heard, viewanimator, toasty, pickerview, flowlayout,
+                 permission, spinkit, qcode, polygon, swipebacklayout]
+    annotationProcessorLibs = [glideCompiler]
+
+}

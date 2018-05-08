@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#e5e5e5"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvGame"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:text="@string/_001"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvHomeTeam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="[2]纽喷飞机"
+                app:layout_constraintEnd_toStartOf="@id/tvVs"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvVs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="vs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvAwayTeam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="墨尔本城[3]"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvVs"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/llNoPoint"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:divider="@drawable/shape_divider"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                app:layout_constraintEnd_toStartOf="@id/tvMoreSel"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tvV"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorD5"
+                    android:text="0"
+                    android:textSize="@dimen/sp_12"/>
+
+                <TextView
+                    android:id="@+id/tvV3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_red"
+                    android:text="胜  1.84"
+                    android:textColor="@drawable/selector_text_white_black"/>
+
+                <TextView
+                    android:id="@+id/tvV1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_red"
+                    android:text="平  3.50"
+                    android:textColor="@drawable/selector_text_white_black"/>
+
+                <TextView
+                    android:id="@+id/tvV0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_red"
+                    android:text="负  3.35"
+                    android:textColor="@drawable/selector_text_white_black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLetPoint"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:divider="@drawable/shape_divider"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                app:layout_constraintEnd_toStartOf="@id/tvMoreSel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llNoPoint">
+
+                <TextView
+                    android:id="@+id/tvLetV"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/blue"
+                    android:text="-1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"/>
+
+                <TextView
+                    android:id="@+id/tvLetV3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_red"
+                    android:text="让胜 3.62"
+                    android:textColor="@drawable/selector_text_white_black"/>
+
+                <TextView
+                    android:id="@+id/tvLetV1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_red"
+                    android:text="让平 3.60"
+                    android:textColor="@drawable/selector_text_white_black"/>
+
+                <TextView
+                    android:id="@+id/tvLetV0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_red"
+                    android:text="让负 1.74"
+                    android:textColor="@drawable/selector_text_white_black"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_divider"
+                app:layout_constraintEnd_toStartOf="@id/tvMoreSel"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="@drawable/shape_divider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvMoreSel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvMoreSel"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="@dimen/dp_4"
+                android:lines="2"
+                android:text="更多玩法"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
