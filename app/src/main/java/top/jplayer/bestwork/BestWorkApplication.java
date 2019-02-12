@@ -25,8 +25,8 @@ public class BestWorkApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         BaseInitApplication.with(this)
-                .addUrl("host_cai_dc","https://dc.leader001.cn/")
-                .addUrl("host_cai_m","https://m.leader001.cn/")
+                .addUrl("host_cai_dc","https://xxx.leader001.cn/")
+                .addUrl("host_cai_m","https://xxx.leader001.cn/")
                 .retrofit(BuildConfig.HOST);
     }
 }
